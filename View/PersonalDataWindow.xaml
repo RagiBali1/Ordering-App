@@ -1,0 +1,26 @@
+﻿<Window x:Class="WPF_Projekt.View.PersonalDataWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Projekt.View"
+        mc:Ignorable="d"
+        Title="PersonalDataWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen" Background="#FFE3A364">
+    <Grid>
+        <Label Content="Személyes adatok:" HorizontalAlignment="Left" Margin="118,35,0,0" VerticalAlignment="Top" Width="144" FontSize="15" FontStyle="Italic"/>
+        <Label Content="Név:" HorizontalAlignment="Left" Height="25" Margin="252,199,0,0" VerticalAlignment="Top" Width="37" FontStyle="Italic"/>
+        <Label Content="Email:" HorizontalAlignment="Left" Height="25" Margin="252,229,0,0" VerticalAlignment="Top" Width="48" FontStyle="Italic"/>
+        <Label Content="Város:" HorizontalAlignment="Left" Height="25" Margin="252,258,0,0" VerticalAlignment="Top" Width="48" FontStyle="Italic"/>
+        <TextBox x:Name="city_box" HorizontalAlignment="Left" Height="17" Margin="292,266,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" IsEnabled="False" AcceptsReturn="True"/>
+        <TextBox x:Name="email_box" HorizontalAlignment="Left" Height="17" Margin="292,233,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" IsEnabled="False" AcceptsReturn="True"/>
+        <TextBox x:Name="name_box" HorizontalAlignment="Left" Height="17" Margin="292,203,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" IsEnabled="False" AcceptsReturn="True"/>
+        <Button x:Name="Continue_Btn" Content="Tovább" HorizontalAlignment="Left" Height="47" Margin="71,335,0,0" VerticalAlignment="Top" Width="94" Background="White" Click="Continue_Btn_Click"/>
+        <Button x:Name="Back_Btn" Content="Vissza" HorizontalAlignment="Left" Height="48" Margin="662,358,0,0" VerticalAlignment="Top" Width="94" Background="White" Click="Back_Btn_Click"/>
+        <DataGrid x:Name="data_Grid" HorizontalAlignment="Left" Height="143" Margin="248,35,0,0" VerticalAlignment="Top" Width="411" ItemsSource="{Binding}" MouseLeftButtonUp="data_Grid_MouseLeftButtonUp"/>
+        <Button x:Name="new_Btn" Content="Új" HorizontalAlignment="Left" Height="31" Margin="676,197,0,0" VerticalAlignment="Top" Width="66" Background="White" Click="new_Btn_Click"/>
+        <Button x:Name="save_Btn" Content="Mentés" HorizontalAlignment="Left" Height="32" Margin="676,231,0,0" VerticalAlignment="Top" Width="66" Background="White" Click="save_Btn_Click"/>
+        <Button x:Name="update_Btn" Content="Módosítás" HorizontalAlignment="Left" Height="31" Margin="676,265,0,0" VerticalAlignment="Top" Width="66" Background="White" Click="update_Btn_Click"/>
+        <Button x:Name="delete_Btn" Content="Törés" HorizontalAlignment="Left" Height="31" Margin="676,299,0,0" VerticalAlignment="Top" Width="66" Background="White" Click="delete_Btn_Click"/>
+
+    </Grid>
+</Window>
